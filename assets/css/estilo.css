@@ -1,0 +1,208 @@
+body{
+    margin:0;
+}
+header{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    width: 100%;
+    max-width: 1040px;
+    height: 100px;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.navbarLogo{
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.navbarLogo img{
+    width: 100%;
+    height:100%;
+}
+.navbarItens{
+    flex: 4;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.navbarItens a{
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+.navbarItens a:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.navbarItens .active{
+    background-color: black;
+    color: white;
+}
+main{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+#Carrosel{
+    flex: 1;
+    height: calc(70vh - 100px);
+    /*background-color: #333;*/
+    /*background-image: url('../img/bg.jpg');*/
+    /*background-size: cover;preencher*/
+    /*background-position:bottom;*/
+    overflow: hidden;
+ }
+ #Carrosel #Sliders{
+     height: 100%;
+     display: flex;
+     transition: all ease 0.3s ;
+ }
+ #Carrosel #Slide{
+     width: 100vw;
+     height: inherit;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     background-color: white;
+     border: 1px solid black;
+ }
+ 
+ #Carrosel h1{
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 50px;
+ }
+ .tituloDadosCarrossel{
+     width: 100%;
+     height: 100px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ }
+ .dadosCarrossel{
+     color: #B28756 ;
+     grid-column-start: 2;
+     grid-column-end: 4;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 25px;
+     overflow-wrap: break-word;
+ }
+ .imagemCarrossel{
+     display: flex;
+     align-items: center;
+     grid-column-start: 1;
+     grid-column-end: 2;
+     background-position: center;
+     background-size: cover;
+ }
+ 
+ #Carrossel h2{
+     text-transform:uppercase;
+     margin-top:20px;
+ }
+ 
+ #Carrosel #SlidersPointers{
+     width: 100vw;
+     height: 20px;
+     position: absolute;
+     margin-top: -50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ #Bolinha{
+     width: 15px;
+     height: 15px;
+     border: 2px solid #B28756 ;
+     border-radius: 8px;
+     margin-left: 5px;
+     margin-right: 5px;
+     cursor: pointer;
+ }
+ #SlidersPointers .active{
+     
+     background-color:  #B28756 ;
+     
+     
+ }
+ 
+.corpo1,.corpo3{
+    background-color:lightblue;
+    width: 100%;
+}
+.limite{
+    max-width: 1040px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.corpo2{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.corpo1 strong,.corpo2 strong,.corpo3 strong{
+    color: gray;
+}
+.corpo2 a{
+    background-color: white;
+    border: black 1px solid;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 30px;
+}
+.corpo2 a:hover{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.corpo1 p,.corpo2 p,.corpo3 p{
+    font-size: 20px;
+}
+.corpo3 a{
+    border: black 1px solid;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.corpo3 a:hover{
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}
+footer{   
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    margin: auto;  
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
