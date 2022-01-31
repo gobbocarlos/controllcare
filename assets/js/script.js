@@ -2,17 +2,15 @@ let totalSlides = document.querySelectorAll('#Slide').length;
 let inicial = 0;
 window.onload = teste();
 function teste(){
-    document.querySelectorAll('.navbar-Item').forEach(function(e) {
-        e.addEventListener('click',function(e){
-            if(e.target.classList.contains("active")){
-                return;
-            }
-            else{
-                e.target.classList.add("active");
-            }
+    const links = document.querySelectorAll('.navbar-Item');
+    links.forEach(function(e){
+        e.addEventListener('click',function(){
+            links.forEach(anchor => anchor.classList.remove("active"));
+            e.classList.add('active');            
         });
     });
-    
+   
+
     document.querySelectorAll('#Bolinha').forEach(function(e) {
         
         e.addEventListener('click',function(e){
@@ -36,7 +34,9 @@ function trocarSlides(){
     if(inicial==totalSlides){
         inicial = 0;
     }
-    let novaMargem = -1 * inicial * document.querySelector('#Carrosel').clientWidth;
+    let slidePosition = inicial + 1;
+    let novaMargem = -1 * inicial * document.querySelector(`#Slide:nth-child(${slidePosition})`).getBoundingClientRect().width;
+
     document.querySelector('#Sliders').style.marginLeft = novaMargem+'px';
     let slides = document.querySelectorAll('#Bolinha');
    for (let i = 0; i < slides.length; i++) {
