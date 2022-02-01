@@ -2,13 +2,13 @@ let totalSlides = document.querySelectorAll('#Slide').length;
 let inicial = 0;
 window.onload = teste();
 function teste(){
-    const links = document.querySelectorAll('.navbar-Item');
+    /*const links = document.querySelectorAll('.navbar-Item');
     links.forEach(function(e){
         e.addEventListener('click',function(){
             links.forEach(anchor => anchor.classList.remove("active"));
             e.classList.add('active');            
         });
-    });
+    });*/
    
 
     document.querySelectorAll('#Bolinha').forEach(function(e) {

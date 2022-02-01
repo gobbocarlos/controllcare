@@ -14,22 +14,22 @@
                 <img  src="assets/img/Colorido-Logo ao lado.png" />
             </div>
             <div class="navbarItens">
-                <a href="index.html" class="navbar-Item active">HOME</a>
-                <a href="#" class="navbar-Item">PRODUTOS</a>
-                <a href="#" class="navbar-Item">CONTATOS</a>
+                <a href="index.html" class="navbar-Item">HOME</a>
+                <a href="produtos.html" class="navbar-Item">PRODUTOS</a>
+                <a href="contatos.html" class="navbar-Item  active">CONTATOS</a>
             </div>
         </nav>
        
     </header>
    <main>
         <div class="principal">
-            <form>
+            <form action="enviarEmail.php" method="post">
                 <input type="text" name="nome" placeholder="Digite seu nome" />
                 <input type="tel" name="cel" placeholder="Digite seu contato" />
                 <input type="text" name="empresa" placeholder="Digite sua empresa ou Hospital" />
                 <input type="email" name="email" placeholder="Digite seu email" />
-                <input id="mensagem" type="text" name="mensagem" placeholder="Digite sua mensagem" />
-                <a type="submit">Enviar</a>
+                <textarea id="mensagem" type="text" name="mensagem" placeholder="Digite sua mensagem"></textarea>
+                <input id="botaoEnviar" type="submit" value="Enviar" />
             </form>
             <div class="contatos">
                 <h1>Contatos</h1>

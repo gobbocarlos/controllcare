@@ -274,14 +274,18 @@ footer{
 }
 #mensagem{
     height: 200px;
+    width: 50%;
+    word-wrap: break-word;
+    word-break: break-all;
 }
-form a{
+#botaoEnviar{
     padding: 5px;
     background-color: darkgreen;
     color: white;
     font-weight: bold;
+    width: 20%;
 }
-form a:hover{
+#botaoEnviar:hover{
     border: 1px solid darkgreen;
     background-color: white;
     color: darkgreen;
