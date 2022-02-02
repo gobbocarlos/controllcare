@@ -55,7 +55,7 @@ main{
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding-bottom: 100px;
+    /*padding-bottom: 100px;*/
 }
 #Carrosel{
     
@@ -104,6 +104,7 @@ main{
      align-items: center;
      font-size: 25px;
      overflow-wrap: break-word;
+     margin-left: 50px;
  }
  .imagemCarrossel{
      display: flex;
@@ -209,7 +210,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    /*position: fixed;*/
 }
 
 /*Página de Produtos*/
@@ -297,4 +298,17 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#footerContato{   
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    margin: auto;  
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
 }

@@ -1,5 +1,10 @@
 <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    require 'vendor/autoload.php';
+    
     $nome = $_POST['nome'];
+    echo($nome);
     $email = $_POST['email'];
     $empresa = $_POST['empresa'];
     $telefone = $_POST['cel'];
@@ -9,20 +14,25 @@
     $hora_envio = date('H:i:s');
     $emailEnviar = "gobbocarlos@hotmail.com";
     $assunto = "Contato pelo Site";
-    /*$headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= 'From: $nome <$email>';*/
-    $headers = array(
-        'From' => $email,
-        'Reply-To' => 'kkgobbo@gmail.com',
-        'X-Mailer' => 'PHP/' . phpversion()
-    );
-    $enviaremail = mail($emailEnviar, $assunto, $mensagem, $headers);
-    if($enviaremail){
-        //echo " <meta http-equiv='refresh' content='10;URL=contato.php'>";
-        echo("Mensagem enviada com sucesso");
-    } 
-    else {
-        echo "";
-    }
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->Port = '465'; //porta usada pelo gmail.
+    $mail->Host = 'smtp.gmail.com'; 
+    $mail->IsHTML(true); 
+    $mail->Mailer = 'smtp'; 
+    $mail->SMTPSecure = 'ssl';
+    $mail->SMTPAuth = true; 
+    $mail->Username = 'kkgobbo@gmail.com'; // usuario gmail.   
+    $mail->Password = 'bcf828385'; // senha do email.
+    $mail->SingleTo = true; 
+    $mail->From = "Mensagem de email, pode vim por uma variavel."; 
+    $mail->FromName = "Nome do remetente."; 
+
+    $mail->addAddress("kkgobbo@gmail.com"); // email do destinatario.
+
+    $mail->Subject = "Aqui vai o assunto do email, pode vim atraves de variavel."; 
+    $mail->Body = "Aqui vai a mensagem, que tambem pode vim por variavel.";
+    $mail->Send();
+    if(!$mail->Send())
+        echo "Erro ao enviar Email:" . $mail->ErrorInfo;
 ?>
